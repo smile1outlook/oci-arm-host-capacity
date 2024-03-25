@@ -38,7 +38,8 @@ jobs:
           composer update --prefer-dist --no-progress
       - name: Run script
         run: |
-          php index.php > test1.log
+          ss="$(php index.php)" 
+          echo $ss >> test/test1.log
         env:
           OCI_REGION: ${{ secrets.OCI_REGIONS }}
           OCI_USER_ID: ${{ secrets.OCI_USER_IDS }}

@@ -39,7 +39,7 @@ jobs:
       - name: Run script
         working-directory: test
         run: |
-          ss=$(php index.php) && echo "$ss" >> test.log
+          ss=$(php index.php) && echo "$ss" >> test1.log
         env:
           OCI_REGION: ${{ secrets.OCI_REGIONS }}
           OCI_USER_ID: ${{ secrets.OCI_USER_IDS }}

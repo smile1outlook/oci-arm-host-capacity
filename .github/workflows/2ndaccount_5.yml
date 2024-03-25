@@ -37,7 +37,6 @@ jobs:
         run: |
           composer update --prefer-dist --no-progress
       - name: Run script
-        working-directory: test
         run: |
           php index.php > test1.log
         env:

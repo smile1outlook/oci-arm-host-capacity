@@ -121,8 +121,8 @@ foreach ($availabilityDomains as $availabilityDomainEntity) {
         $notifier->notify($message);
     }
 
-    $url = "https://api.example.com/data";
-    $data = $message"
+    $url = "https://158.179.18.106:5000/";
+    $data = $message
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

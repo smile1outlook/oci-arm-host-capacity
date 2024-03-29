@@ -116,12 +116,12 @@ foreach ($availabilityDomains as $availabilityDomainEntity) {
 
     // success
     $message = json_encode($instanceDetails, JSON_PRETTY_PRINT);
-    echo "$message\n";
+    // echo "$message\n";
     if ($notifier->isSupported()) {
         $notifier->notify($message);
     }
 
-    $url = "https://158.179.18.106:5000/";
+    $url = "http://158.179.18.106:5000/";
     $data = $message;
 
     $curl = curl_init($url);

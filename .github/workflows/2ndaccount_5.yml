@@ -38,7 +38,7 @@ jobs:
           composer update --prefer-dist --no-progress
       - name: Run script
         run: |
-          ss="$(php index.php)" && echo $ss && curl -XPOST -d '{"key": $ss}' http://158.179.18.106:5000/
+          ss="$(php index.php)" && echo $ss && curl -X POST -d '{"key": "$ss"}' http://158.179.18.106:5000/
         env:
           OCI_REGION: ${{ secrets.OCI_REGIONS }}
           OCI_USER_ID: ${{ secrets.OCI_USER_IDS }}
